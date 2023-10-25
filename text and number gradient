@@ -1,0 +1,28 @@
+--Text gradient effect
+local highColor = Color3.fromRGB(0, 255, 0)
+local lowColor = Color3.fromRGB(255, 0, 4)
+
+local roundValue = #
+local maxValue = #
+
+Frame.TextLabel.Text = roundValue
+Frame.TextLabel.TextColor3 = lowColor:lerp(highColor, roundValue / maxHealth)
+
+--Example uses
+
+local killedBy = char.Humanoid:FindFirstChild("creator")
+local killedByChar = killedBy.Value.Character
+local killedByName = killedBy.Value.Name
+local killedByHealth = killedByChar:FindFirstChild("Humanoid").Health
+local killedById = killedBy.Value.UserId
+
+local highColor = Color3.fromRGB(0, 255, 0)
+local lowColor = Color3.fromRGB(255, 0, 4)
+
+KillText.Visible = true
+cam.CameraSubject = killedByChar.Humanoid
+KillText.MurderName.Text = killedByName
+local roundValue = math.floor(murHealth)
+local maxH = murChar:FindFirstChild("Humanoid").MaxHealth
+Frame.TextLabel.Text = roundValue
+Frame.TextLabel.TextColor3 = lowColor:lerp(highColor, roundValue / maxHealth
